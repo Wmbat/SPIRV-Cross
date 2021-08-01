@@ -1,0 +1,6 @@
+$out_root/
+{
+  include spirv-cross-glsl/
+}
+
+export $out_root/spirv-cross-glsl/$import.target

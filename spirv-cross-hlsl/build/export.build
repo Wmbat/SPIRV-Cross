@@ -1,0 +1,6 @@
+$out_root/
+{
+  include spirv-cross-hlsl/
+}
+
+export $out_root/spirv-cross-hlsl/$import.target

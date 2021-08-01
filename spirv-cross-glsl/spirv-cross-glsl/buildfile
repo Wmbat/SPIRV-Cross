@@ -1,0 +1,32 @@
+import intf_libs = spirv-cross-core%lib{spirv-cross-core}
+impl_libs = # Implementation dependencies.
+
+lib{spirv-cross-glsl}: {hxx ixx txx cxx}{**} $impl_libs $intf_libs
+
+hxx{export}@./: cxx.importable = false
+
+# Build options.
+#
+cxx.poptions =+ "-I$out_root" "-I$src_root" "-I$src_base/"
+
+{hbmia obja}{*}: cxx.poptions += -DSPIRV_CROSS_GLSL_STATIC_BUILD
+{hbmis objs}{*}: cxx.poptions += -DSPIRV_CROSS_GLSL_SHARED_BUILD
+
+# Export options.
+#
+lib{spirv-cross-glsl}:
+{
+  cxx.export.poptions = "-I$out_root" "-I$src_root" "-I$src_base/"
+  cxx.export.libs = $intf_libs
+}
+
+liba{spirv-cross-glsl}: cxx.export.poptions += -DSPIRV_CROSS_GLSL_STATIC
+libs{spirv-cross-glsl}: cxx.export.poptions += -DSPIRV_CROSS_GLSL_SHARED
+
+# Install into the spirv-cross-glsl/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+{hxx ixx txx}{*}:
+{
+  install         = include/
+}

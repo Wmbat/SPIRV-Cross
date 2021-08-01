@@ -1,0 +1,4 @@
+import libs = spirv-cross-core%lib{spirv-cross-core}
+
+./: exe{small_vector}: cxx{small_vector.cpp} $libs
+./: exe{typed_id_test}: cxx{typed_id_test.cpp} $libs

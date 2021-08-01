@@ -1,0 +1,7 @@
+project = spirv-cross-cpp
+
+using version
+using config
+using test
+using install
+using dist
