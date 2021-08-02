@@ -1,0 +1,14 @@
+: 1
+name: spirv-cross-reflect
+version: 2021.01.15
+project: SPIRV-Cross
+summary: spirv-cross-reflect C++ library
+license: Apache-2.0         ; Apache License 2.0
+description-file: README.md
+url: https://github.com/KhronosGroup/SPIRV-Cross
+package-email: wmbat@protonmail.com
+
+depends: * build2 >= 0.13.0
+depends: * bpkg >= 0.13.0
+
+depends: spirv-cross-glsl == 2021.01.15

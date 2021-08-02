@@ -6,3 +6,5 @@ location: spirv-cross-glsl/
 location: spirv-cross-cpp/
 :
 location: spirv-cross-hlsl/
+:
+location: spirv-cross-reflect/

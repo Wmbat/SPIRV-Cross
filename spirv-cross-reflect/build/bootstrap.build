@@ -1,0 +1,7 @@
+project = spirv-cross-reflect
+
+using version
+using config
+using test
+using install
+using dist
