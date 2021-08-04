@@ -8,3 +8,9 @@ location: spirv-cross-cpp/
 location: spirv-cross-hlsl/
 :
 location: spirv-cross-reflect/
+:
+location: spirv-cross-msl/
+:
+location: spirv-cross-util/
+:
+location: spirv-cross/

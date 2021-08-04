@@ -1,0 +1,12 @@
+libs =
+import libs += spirv-cross-core%lib{spirv-cross-core}
+import libs += spirv-cross-cpp%lib{spirv-cross-cpp}
+import libs += spirv-cross-glsl%lib{spirv-cross-glsl}
+import libs += spirv-cross-hlsl%lib{spirv-cross-hlsl}
+import libs += spirv-cross-msl%lib{spirv-cross-msl}
+import libs += spirv-cross-reflect%lib{spirv-cross-reflect}
+import libs += spirv-cross-util%lib{spirv-cross-util}
+
+exe{spirv-cross}: {hxx ixx txx cxx}{**} $libs
+
+cxx.poptions =+ "-I$out_root" "-I$src_root"

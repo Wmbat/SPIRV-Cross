@@ -1,0 +1,7 @@
+project = spirv-cross-util
+
+using version
+using config
+using test
+using install
+using dist

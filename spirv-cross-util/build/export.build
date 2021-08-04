@@ -1,0 +1,6 @@
+$out_root/
+{
+  include spirv-cross-util/
+}
+
+export $out_root/spirv-cross-util/$import.target

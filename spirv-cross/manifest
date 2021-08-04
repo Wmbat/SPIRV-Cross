@@ -1,0 +1,20 @@
+: 1
+name: spirv-cross
+version: 2021.01.15
+project: SPIRV-Cross
+summary: spirv-cross C++ executable
+license: Apache-2.0         ; Apache License 2.0
+description-file: README.md
+url: https://github.com/KhronosGroup/SPIRV-Cross
+package-email: wmbat@protonmail.com
+
+depends: * build2 >= 0.13.0
+depends: * bpkg >= 0.13.0
+
+depends: spirv-cross-core == 2021.01.15
+depends: spirv-cross-cpp == 2021.01.15
+depends: spirv-cross-glsl == 2021.01.15
+depends: spirv-cross-hlsl == 2021.01.15
+depends: spirv-cross-msl == 2021.01.15
+depends: spirv-cross-reflect == 2021.01.15
+depends: spirv-cross-util == 2021.01.15
